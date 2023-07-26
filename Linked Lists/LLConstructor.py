@@ -1,4 +1,4 @@
-class Node:
+class node:
     # only thing it contains is constructor
     # node is going to  contain value and next
     def __init__(self, value):
@@ -6,20 +6,22 @@ class Node:
         self.next = None
 
 
-class LinkedList:
+class LL:
     # this is a constructor, value as a parameter
     # create new node
     def __init__(self, value):
-        new_node = Node(value)
+        new_node = node(value)
         self.head = new_node
         self.tail = new_node
         self.length = 1
 
 
 # from this we have created a node with head and tail
-my_linked_list = LinkedList(4)
+my_linked_list = LL(4)
 
 print(my_linked_list.head.value)
+
+
 # # create new node and Add to the end
 # def append(self,value):
 #
@@ -59,3 +61,17 @@ print(my_linked_list.head.value)
 # tail attributes of the linked list to point to the new node.
 #
 # A length attribute, initialized to 1, which represents the current number of nodes in the list.
+class Node:
+    def __init__(self, value):
+        self.value = value
+        # this will store reference to the nexg node
+        self.next = next
+
+
+class LinkedList:
+    # takes in value as an argument
+    def __init__(self, value):
+        new = Node(value)
+        self.head = new
+        self.tail = new
+        self.length = 1
