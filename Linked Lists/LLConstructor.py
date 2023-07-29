@@ -65,7 +65,7 @@ class Node:
     def __init__(self, value):
         self.value = value
         # this will store reference to the nexg node
-        self.next = next
+        self.next = None
 
 
 class LinkedList:
