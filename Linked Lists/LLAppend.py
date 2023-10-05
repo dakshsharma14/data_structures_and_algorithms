@@ -24,13 +24,16 @@ class LinkedList:
 
     def append(self, value):
         new_node = Node(value)
+        # if there is not items in the list then we use the below code
         if self.head is None:
             self.head = new_node
             self.tail = new_node
         else:
             self.tail.next = new_node
             self.tail = new_node
+        # to increase the length of the list by 1
         self.length += 1
+        return True
 
 
 my_list = LinkedList(1)

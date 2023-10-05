@@ -1,5 +1,5 @@
 class node:
-    # only thing it contains is constructor
+    # only thing it contains is node constructor
     # node is going to  contain value and next
     def __init__(self, value):
         self.value = value
@@ -7,10 +7,12 @@ class node:
 
 
 class LL:
-    # this is a constructor, value as a parameter
+    # this is a LL constructor, value as a parameter
     # create new node
     def __init__(self, value):
+        # this line will call the node class and create the node
         new_node = node(value)
+
         self.head = new_node
         self.tail = new_node
         self.length = 1
