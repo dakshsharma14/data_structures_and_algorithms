@@ -44,7 +44,7 @@ class LinkedList:
         while temp.next:
             pre = temp
             temp = temp.next
-            
+
         # at this point the pre is pointing to the second last node, and temp at last.
         self.tail = pre
         self.tail.next = None
@@ -65,8 +65,27 @@ class LinkedList:
         self.length += 1
         return True
 
+    def pop_first(self):
+        if self.length == 0:
+            return None
+        temp = self.head
+        self.head = self.head.next
+        temp.next = None
+        self.length -= 1
+        # after we have decrememtned the list by one
+        if self.length == 0:
+            self.tail = None
+        return temp.value
+
 
 my_list = LinkedList(2)
 
-my_list.prepend(4)
-my_list.print_list()
+my_list.append(3)
+
+print(my_list.pop_first())
+
+print(my_list.pop_first())
+
+print(my_list.pop_first())
+
+

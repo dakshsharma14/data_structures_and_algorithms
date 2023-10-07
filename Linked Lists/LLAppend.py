@@ -38,5 +38,8 @@ class LinkedList:
 
 my_list = LinkedList(1)
 my_list.append(2)
+my_list.append(3)
 
-my_list.print_list()
+# my_list.print_list()
+print(my_list.head.value)
+print(my_list.tail.value)
