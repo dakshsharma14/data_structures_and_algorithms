@@ -30,6 +30,8 @@ class LinkedList:
 
     # remove the last node
     def pop(self):
+
+        # this to check if the started linked list is empty of not
         if self.length == 0:
             return None
         #
@@ -43,6 +45,7 @@ class LinkedList:
         self.tail = pre
         self.tail.next = None
         self.length -= 1
+        # this to check if the ll is empty after pop
         if self.length == 0:
             self.head = None
             self.tail = None
